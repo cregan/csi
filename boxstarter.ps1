@@ -16,7 +16,7 @@ $Boxstarter.AutoLogin=$true
 
 # Update Windows and reboot if necessary
 Install-WindowsUpdate -AcceptEula
-if (Test-PendingReboot) { Invoke-Reboot }
+#if (Test-PendingReboot) { Invoke-Reboot }
 
 # Install software
 
@@ -34,4 +34,4 @@ choco install quicktime -y
 choco install adobeshockwaveplayer -y
 choco install wget -y
 choco install audacity -y
- choco install powershell4 -y
+choco install powershell4 -y
