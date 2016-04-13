@@ -20,18 +20,25 @@ Install-WindowsUpdate -AcceptEula
 
 # Install software
 
+choco install jre8 -y
+
 choco install flashplayerplugin -y
+choco install adobeair -y
+choco install adobereader -y
+choco install adobeshockwaveplayer -y
+
 choco install googlechrome -y
 choco install 7zip.install -y
-choco install adobereader -y
+
 choco install vlc -y
+choco install quicktime -y
+choco install audacity -y
+choco install wget -y
+
 choco install dotnet4.5.1 -y
 choco install dotnet3.5 -y
 choco install vcredist2008 -y
 choco install vcredist2012 -y
 choco install vcredist2013 -y
-choco install quicktime -y
-choco install adobeshockwaveplayer -y
-choco install wget -y
-choco install audacity -y
 choco install powershell4 -y
+
