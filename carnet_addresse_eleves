@@ -1,0 +1,28 @@
+Carnet d'adresse élèves
+-----------------------------------------------------------------
+
+get-GlobalAddressList | fl
+
+IsDefaultGlobalAddressList   : False
+Name                         : GAL_Eleves
+RecipientFilter              : CustomAttribute1 -eq 'Eleves'
+LdapRecipientFilter          : (extensionAttribute1=Eleves)
+Identity                     : \GAL_Eleves
+Id                           : \GAL_Eleves
+-----------------------------------------------------------------
+
+get-AddressBookPolicy | fl
+
+AddressLists       : {\AL_Eleves}
+GlobalAddressList  : \GAL_Eleves
+RoomList           : \AL_Eleves_Resources
+OfflineAddressBook : \OAB_Eleves
+IsDefault          : False
+Name               : ABP_Eleves
+Identity           : ABP_Eleves
+Id                 : ABP_Eleves
+-----------------------------------------------------------------
+
+
+Set-Mailbox -Identity $UPN_Eleve -AddressBookPolicy "ABP_Eleves"
+
